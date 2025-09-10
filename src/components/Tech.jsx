@@ -169,55 +169,55 @@ const Tech = () => {
             variants={iconVariants(2)}
             className="p-4"
           >
-            <SiAwsamplify className="text-7xl text-orange-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiAwsamplify className="text-7xl md:text-5xl sm:text-3xl text-orange-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiJsonwebtokens className="text-7xl text-purple-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiJsonwebtokens className="text-7xl md:text-5xl sm:text-3xl text-purple-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(5)} className="p-4">
-            <RiJavaLine className="text-7xl text-red-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <RiJavaLine className="text-7xl md:text-5xl sm:text-3xl text-red-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(2)} className="p-4">
-            <SiC className="text-7xl text-blue-800 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiC className="text-7xl md:text-5xl sm:text-3xl text-blue-800 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiCplusplus className="text-7xl text-blue-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiCplusplus className="text-7xl md:text-5xl sm:text-3xl text-blue-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(5)} className="p-4">
-            <SiDocker className="text-7xl text-blue-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiDocker className="text-7xl md:text-5xl sm:text-3xl text-blue-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(2)} className="p-4">
-            <SiKubernetes className="text-7xl text-blue-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiKubernetes className="text-7xl md:text-5xl sm:text-3xl text-blue-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiGithub className="text-7xl text-gray-200 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiGithub className="text-7xl md:text-5xl sm:text-3xl text-gray-200 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(5)} className="p-4">
-            <SiPostman className="text-7xl text-orange-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiPostman className="text-7xl md:text-5xl sm:text-3xl text-orange-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(2)} className="p-4">
-            <SiJest className="text-7xl text-red-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiJest className="text-7xl md:text-5xl sm:text-3xl text-red-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiTypescript className="text-7xl text-blue-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiTypescript className="text-7xl md:text-5xl sm:text-3xl text-blue-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(5)} className="p-4">
-            <SiPython className="text-7xl text-yellow-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiPython className="text-7xl md:text-5xl sm:text-3xl text-yellow-500 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(2)} className="p-4">
-            <SiAmazon className="text-7xl text-orange-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiAmazon className="text-7xl md:text-5xl sm:text-3xl text-orange-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiGraphql className="text-7xl text-pink-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiGraphql className="text-7xl md:text-5xl sm:text-3xl text-pink-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(5)} className="p-4">
-            <SiBootstrap className="text-7xl text-purple-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiBootstrap className="text-7xl md:text-5xl sm:text-3xl text-purple-600 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(2)} className="p-4">
-            <SiSass className="text-7xl text-pink-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiSass className="text-7xl  md:text-5xl sm:text-3xl text-pink-400 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
           <Motion.div initial="initial" animate="animate" variants={iconVariants(3)} className="p-4">
-            <SiGit className="text-7xl text-red-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
+            <SiGit className="text-7xl md:text-5xl sm:text-3xl text-red-700 transition-transform  duration-300 hover:scale-110 hover:text-opacity-80" />
           </Motion.div>
         </Motion.div>
       </div>
