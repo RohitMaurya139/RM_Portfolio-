@@ -3,6 +3,7 @@ import project2 from "../assets/projects/project-2.PNG";
 import project3 from "../assets/projects/project-3.PNG";
 import project4 from "../assets/projects/project-4.PNG";
 import project5 from "../assets/projects/project-5.PNG";
+import project6 from "../assets/projects/project-6.PNG";
 
 export const HERO_CONTENT = `Passionate full-stack developer dedicated to building scalable, user-focused web applications. Committed to collaboration, innovation, and turning ideas into seamless digital experiences.
 
@@ -43,8 +44,24 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "DevConnect- Developer Networking Platform",
+    title: "QuickChat-Realtime Chat Application",
     image: project1,
+    link: "https://quick-chat-client-nu.vercel.app/",
+    description:
+      "Built a full-stack real-time chat platform using React.js, Node.js, Express.js, and MongoDB with secure user authentication.Implemented real-time messaging and online presence detection using Socket.io, enabling users to chat instantly with active users.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Socket.io",
+    ],
+  },
+  {
+    title: "DevConnect- Developer Networking Platform",
+    image: project2,
     link: "https://github.com/RohitMaurya139/DevConnect-Backend",
     description:
       "Developed DevConnect,a developer networking platform (Tinder-inspired, not for dating) enabling sign-up/login, profile creation, tech stack-based discovery, and connection requests with accept/reject functionality.",
@@ -62,7 +79,7 @@ export const PROJECTS = [
   },
   {
     title: "FlixStreamGPT",
-    image: project2,
+    image: project3,
     link: "https://github.com/RohitMaurya139/FLIXSTREAM-GPT",
     description:
       "Developed a responsive, Netflix-like movie streaming platform with global search, detailed movie info, and trailer viewing, built using React (Vite) for fast performance and modular architecture.",
@@ -79,7 +96,7 @@ export const PROJECTS = [
   },
   {
     title: "MovieVerse Entertainment",
-    image: project3,
+    image: project5,
     link: "https://tera-movies-mini-app.netlify.app/",
     description:
       "Developed a responsive movie website that showcases movie previews, download links, and details such as year, quality, and genre. Designed an intuitive user interface with a clean layout, search functionality, and structured menus for easy navigation. Focused on optimizing page structure and styling for better user experience across devices.",
@@ -87,7 +104,7 @@ export const PROJECTS = [
   },
   {
     title: "ToDesktop WebApp",
-    image: project5,
+    image: project6,
     link: "https://todesktop-by-rohit-maurya.netlify.app/",
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.I have built the frontend of the ToDesktop website, replicating its complete user interface. The website is fully responsive and adapts seamlessly to mobile, tablet, and laptop screen sizes.",
