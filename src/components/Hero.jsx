@@ -67,7 +67,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="bg-white rounded-full p-4 text-sm text-stone-800 mb-4"
+                className="bg-white rounded-full p-4 text-sm text-stone-800 mb-4 hover:bg-stone-200 hover:scale-105 transition-all duration-300"
               >
                 Download Resume
               </Motion.a>
