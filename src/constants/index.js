@@ -1,8 +1,8 @@
 import project1 from "../assets/projects/project-1.PNG";
 import project2 from "../assets/projects/project-2.PNG";
 import project3 from "../assets/projects/project-3.PNG";
-import project4 from "../assets/projects/project-4.PNG";
-import project5 from "../assets/projects/project-5.PNG";
+import project4 from "../assets/projects/project-5.PNG";
+import project5 from "../assets/projects/project-4.PNG";
 import project6 from "../assets/projects/project-6.PNG";
 
 export const HERO_CONTENT = `Passionate full-stack developer dedicated to building scalable, user-focused web applications. Committed to collaboration, innovation, and turning ideas into seamless digital experiences.
