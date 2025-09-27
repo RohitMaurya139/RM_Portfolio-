@@ -44,6 +44,22 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Netwise-Social Network Platform",
+    image: project6,
+    link: "https://netwise-webapp-frontend.onrender.com/",
+    description:
+      " A full-stack professional networking platform inspired by LinkedIn, featuring secure sign-up and login, personalized profiles with photo, skills, education, company, and experience. Key functionality includes creating and sharing posts (text only), real-time likes and comments using Socket.io, and the ability to send, accept, or reject connection requests.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Socket.io",
+    ],
+  },
+  {
     title: "QuickChat-Realtime Chat Application",
     image: project1,
     link: "https://quick-chat-client-nu.vercel.app/",
@@ -102,14 +118,7 @@ export const PROJECTS = [
       "Developed a responsive movie website that showcases movie previews, download links, and details such as year, quality, and genre. Designed an intuitive user interface with a clean layout, search functionality, and structured menus for easy navigation. Focused on optimizing page structure and styling for better user experience across devices.",
     technologies: ["HTML", "CSS", "JavaScript", "API"],
   },
-  {
-    title: "ToDesktop WebApp",
-    image: project6,
-    link: "https://todesktop-by-rohit-maurya.netlify.app/",
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.I have built the frontend of the ToDesktop website, replicating its complete user interface. The website is fully responsive and adapts seamlessly to mobile, tablet, and laptop screen sizes.",
-    technologies: ["HTML", "Tailwind CSS", "React"],
-  },
+
 ];
 
 export const CONTACT = {
