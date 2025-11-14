@@ -1,12 +1,11 @@
-import React from "react";
-import { motion as Motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   RiReactjsLine,
   RiCss3Line,
   RiJavaLine,
   RiJavascriptLine,
 } from "react-icons/ri";
-
 import {
   SiExpress,
   SiMongodb,
@@ -20,9 +19,6 @@ import {
   SiCplusplus,
   SiC,
   SiNextdotjs,
-  SiNestjs,
-  SiDocker,
-  SiKubernetes,
   SiGithub,
   SiPostman,
   SiJest,
@@ -30,255 +26,292 @@ import {
   SiPython,
   SiAmazon,
   SiGraphql,
-  SiBootstrap,
-  SiSass,
   SiGit,
 } from "react-icons/si";
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
+const technologies = [
+  {
+    icon: RiReactjsLine,
+    name: "React",
+    color: "text-cyan-400",
+    category: "Frontend",
   },
-});
+  {
+    icon: SiNodedotjs,
+    name: "Node.js",
+    color: "text-green-500",
+    category: "Backend",
+  },
+  {
+    icon: SiExpress,
+    name: "Express",
+    color: "text-gray-300",
+    category: "Backend",
+  },
+  {
+    icon: SiNextdotjs,
+    name: "Next.js",
+    color: "text-white",
+    category: "Frontend",
+  },
+  {
+    icon: SiMongodb,
+    name: "MongoDB",
+    color: "text-green-500",
+    category: "Database",
+  },
+  // {
+  //   icon: SiMysql,
+  //   name: "MySQL",
+  //   color: "text-blue-500",
+  //   category: "Database",
+  // },
+  {
+    icon: SiTailwindcss,
+    name: "Tailwind",
+    color: "text-teal-400",
+    category: "Frontend",
+  },
+  {
+    icon: SiRedux,
+    name: "Redux",
+    color: "text-purple-500",
+    category: "Frontend",
+  },
+  {
+    icon: SiMaterialdesign,
+    name: "Material UI",
+    color: "text-blue-400",
+    category: "Frontend",
+  },
+  {
+    icon: RiCss3Line,
+    name: "CSS3",
+    color: "text-blue-600",
+    category: "Frontend",
+  },
+  {
+    icon: RiJavascriptLine,
+    name: "JavaScript",
+    color: "text-yellow-400",
+    category: "Language",
+  },
+  {
+    icon: SiTypescript,
+    name: "TypeScript",
+    color: "text-blue-600",
+    category: "Language",
+  },
+  // {
+  //   icon: SiAwsamplify,
+  //   name: "AWS Amplify",
+  //   color: "text-orange-500",
+  //   category: "Cloud",
+  // },
+  // { icon: SiAmazon, name: "AWS", color: "text-orange-400", category: "Cloud" },
+  {
+    icon: SiJsonwebtokens,
+    name: "JWT",
+    color: "text-purple-600",
+    category: "Backend",
+  },
+  {
+    icon: RiJavaLine,
+    name: "Java",
+    color: "text-red-500",
+    category: "Language",
+  },
+  // { icon: SiC, name: "C", color: "text-blue-700", category: "Language" },
+  // {
+  //   icon: SiCplusplus,
+  //   name: "C++",
+  //   color: "text-blue-500",
+  //   category: "Language",
+  // },
+  {
+    icon: SiPython,
+    name: "Python",
+    color: "text-yellow-500",
+    category: "Language",
+  },
+  { icon: SiGithub, name: "GitHub", color: "text-gray-300", category: "Tools" },
+  { icon: SiGit, name: "Git", color: "text-red-600", category: "Tools" },
+  {
+    icon: SiPostman,
+    name: "Postman",
+    color: "text-orange-500",
+    category: "Tools",
+  },
+  // { icon: SiJest, name: "Jest", color: "text-red-500", category: "Tools" },
+  {
+    icon: SiGraphql,
+    name: "GraphQL",
+    color: "text-pink-500",
+    category: "Backend",
+  },
+];
+
+const categories = [
+  "All",
+  "Frontend",
+  "Backend",
+  "Database",
+  "Language",
+  "Cloud",
+  "Tools",
+];
 
 const Tech = () => {
+  const [filter, setFilter] = useState("All");
+  const [hoveredTech, setHoveredTech] = useState(null);
+
+  const filteredTechs =
+    filter === "All"
+      ? technologies
+      : technologies.filter((tech) => tech.category === filter);
+
   return (
-    <>
-      <div className="pb-15">
-        <Motion.h2
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1.5 }}
-          className="my-20 text-center text-4xl"
-        >
-          Technologies
-        </Motion.h2>
-        <Motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1.5 }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
+    <div className="pb-24 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-16"
+      >
+        <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent mb-4">
+          Tech Stack
+        </h2>
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          Technologies I use to build exceptional digital experiences
+        </p>
+      </motion.div>
+
+      {/* Category Filter */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex flex-wrap justify-center gap-3 mb-12"
+      >
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setFilter(category)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              filter === category
+                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/50 scale-105"
+                : "bg-gray-800/50 text-gray-400 hover:bg-gray-700/50 hover:text-white border border-gray-700"
+            }`}
           >
-            <RiReactjsLine className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-cyan-400 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
+            {category}
+          </button>
+        ))}
+      </motion.div>
+
+      {/* Tech Grid */}
+      <motion.div
+        layout
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto"
+      >
+        {filteredTechs.map((tech, index) => {
+          const Icon = tech.icon;
+          return (
+            <motion.div
+              key={tech.name}
+              layout
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3, delay: index * 0.03 }}
+              whileHover={{
+                scale: 1.1,
+                rotateY: 15,
+                z: 50,
+              }}
+              onHoverStart={() => setHoveredTech(tech.name)}
+              onHoverEnd={() => setHoveredTech(null)}
+              className="relative group"
+              style={{ perspective: "1000px" }}
+            >
+              <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 shadow-xl hover:shadow-purple-500/20">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 rounded-2xl transition-all duration-300" />
+
+                {/* Icon */}
+                <div className="relative flex flex-col items-center justify-center space-y-3">
+                  <motion.div
+                    animate={{
+                      y: hoveredTech === tech.name ? [0, -10, 0] : 0,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      repeat: hoveredTech === tech.name ? Infinity : 0,
+                      repeatType: "reverse",
+                    }}
+                  >
+                    <Icon className={`text-5xl ${tech.color} drop-shadow-lg`} />
+                  </motion.div>
+
+                  {/* Name */}
+                  <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
+                    {tech.name}
+                  </span>
+                </div>
+
+                {/* Particle effect on hover */}
+                {hoveredTech === tech.name && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                    className="absolute inset-0 rounded-2xl"
+                    style={{
+                      background: `radial-gradient(circle at 50% 50%, ${tech.color.replace(
+                        "text-",
+                        "rgb(var(--tw-"
+                      )}20, transparent 70%)`,
+                    }}
+                  />
+                )}
+              </div>
+
+              {/* Category badge */}
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                {tech.category}
+              </div>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+
+      {/* Stats Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+      >
+        {[
+          { label: "Technologies", value: technologies.length },
+          { label: "Years Experience", value: "2+" },
+          { label: "Projects Built", value: "15+" },
+          { label: "Lines of Code", value: "50K+" },
+        ].map((stat, index) => (
+          <div
+            key={index}
+            className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700/50 text-center hover:border-purple-500/50 transition-all duration-300"
           >
-            <SiNodedotjs className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-green-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiExpress className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-200 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiNextdotjs className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          {/* <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiNestjs className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-red-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div> */}
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiMongodb className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-green-500 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiMysql className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiTailwindcss className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-teal-400 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiRedux className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-purple-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiMaterialdesign className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-500 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <RiCss3Line className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-700 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <RiJavascriptLine className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-yellow-400 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiAwsamplify className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-orange-500 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiJsonwebtokens className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-purple-700 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <RiJavaLine className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-red-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiC className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-blue-800 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiCplusplus className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-blue-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          {/* <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiDocker className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-blue-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div> */}
-         
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiGithub className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-gray-200 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiPostman className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-orange-500 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiJest className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-red-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiTypescript className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-blue-700 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(5)}
-            className="p-4"
-          >
-            <SiPython className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-yellow-500 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(2)}
-            className="p-4"
-          >
-            <SiAmazon className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-orange-400 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiGraphql className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-pink-600 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-         
-          <Motion.div
-            initial="initial"
-            animate="animate"
-            variants={iconVariants(3)}
-            className="p-4"
-          >
-            <SiGit className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-red-700 transition-transform duration-300 hover:scale-110 hover:text-opacity-80" />
-          </Motion.div>
-        </Motion.div>
-      </div>
-    </>
+            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
+              {stat.value}
+            </div>
+            <div className="text-gray-400 text-sm">{stat.label}</div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 

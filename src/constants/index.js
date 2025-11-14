@@ -1,8 +1,7 @@
 import project1 from "../assets/projects/project-1.PNG";
 import project2 from "../assets/projects/project-2.PNG";
-import project3 from "../assets/projects/project-3.PNG";
-import project4 from "../assets/projects/project-5.PNG";
-import project5 from "../assets/projects/project-4.PNG";
+import project7 from "../assets/projects/project-7.PNG";
+import project8 from "../assets/projects/project-8.PNG";
 import project6 from "../assets/projects/project-6.PNG";
 
 export const HERO_CONTENT = `Passionate full-stack developer dedicated to building scalable, user-focused web applications. Committed to collaboration, innovation, and turning ideas into seamless digital experiences.
@@ -44,9 +43,25 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "QuickCart",
+    image: project8,
+    link: "https://quick-cart-opal-one.vercel.app/",
+    description:
+      "Developed a fully responsive e-commerce application with role-based authentication (Seller & Customer), allowing product management, cart, and checkout features.Integrated Clerk for Google login and Inngest for backend automation workflows, enhancing scalability and user experience.",
+    technologies: ["Next.js","Clerk","Inngest","JavaScript", "Tailwind CSS"],
+  },
+  {
+    title: "Ask-Ai",
+    image: project7,
+    link: "https://askai-21cm.vercel.app/",
+    description:
+      "Built AskAI, a full-stack MERN application integrating the Groq Llama-3 API to deliver ultra-fast AI-generated responses. Developed a responsive React + Tailwind UI and secure Express backend with environment-based API handling.",
+    technologies: ["React.js", "Groq", "Node.js", "Express.js", "Tailwind CSS"],
+  },
+  {
     title: "Netwise-Social Network Platform",
     image: project6,
-    link: "https://netwise-webapp-frontend.onrender.com/",
+    link: "https://netwise-web-app.vercel.app/",
     description:
       " A full-stack professional networking platform inspired by LinkedIn, featuring secure sign-up and login, personalized profiles with photo, skills, education, company, and experience. Key functionality includes creating and sharing posts (text only), real-time likes and comments using Socket.io, and the ability to send, accept, or reject connection requests.",
     technologies: [
@@ -93,32 +108,6 @@ export const PROJECTS = [
       "AWS(Ec2)",
     ],
   },
-  {
-    title: "FlixStreamGPT",
-    image: project3,
-    link: "https://github.com/RohitMaurya139/FLIXSTREAM-GPT",
-    description:
-      "Developed a responsive, Netflix-like movie streaming platform with global search, detailed movie info, and trailer viewing, built using React (Vite) for fast performance and modular architecture.",
-    technologies: ["React.js", "Redux", "Tailwind CSS", "TMBD API", "Firebase"],
-  },
-
-  {
-    title: "Focus On Today",
-    image: project4,
-    link: "https://focus-today-by-rohit-maurya.netlify.app/",
-    description:
-      "Built a responsive daily task tracker web app with features like adding, editing, and deleting tasks across devices. Implemented localStorage to persist user data even after closing the browser, ensuring a consistent  experience.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "MovieVerse Entertainment",
-    image: project5,
-    link: "https://tera-movies-mini-app.netlify.app/",
-    description:
-      "Developed a responsive movie website that showcases movie previews, download links, and details such as year, quality, and genre. Designed an intuitive user interface with a clean layout, search functionality, and structured menus for easy navigation. Focused on optimizing page structure and styling for better user experience across devices.",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
-  },
-
 ];
 
 export const CONTACT = {
