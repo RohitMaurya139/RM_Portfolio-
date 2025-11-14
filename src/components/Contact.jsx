@@ -18,8 +18,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -123,7 +122,7 @@ const Contact = () => {
           />
         </svg>
       ),
-      link: "https://github.com/RohitMaurya139",
+      link: "https://github.com",
     },
     {
       name: "LinkedIn",
@@ -132,7 +131,16 @@ const Contact = () => {
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
         </svg>
       ),
-      link: "https://www.linkedin.com/in/rohit139maurya/",
+      link: "https://linkedin.com",
+    },
+    {
+      name: "Twitter",
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+        </svg>
+      ),
+      link: "https://twitter.com",
     },
   ];
 
@@ -153,14 +161,14 @@ const Contact = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
         {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-2 space-y-6"
+          className="lg:col-span-2 space-y-4 lg:space-y-6"
         >
           {contactMethods.map((method, index) => (
             <motion.a
@@ -171,24 +179,24 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.02, x: 10 }}
-              className="block bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 shadow-xl group"
+              className="block bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl lg:rounded-2xl p-4 lg:p-6 hover:border-purple-500/50 transition-all duration-300 shadow-xl group"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-3 lg:gap-4">
                 <div
-                  className={`p-3 bg-gradient-to-r ${method.color} rounded-xl text-white shadow-lg`}
+                  className={`p-2 lg:p-3 bg-gradient-to-r ${method.color} rounded-lg lg:rounded-xl text-white shadow-lg flex-shrink-0`}
                 >
                   {method.icon}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base lg:text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
                     {method.label}
                   </h3>
-                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  <p className="text-sm lg:text-base text-gray-400 group-hover:text-gray-300 transition-colors break-words">
                     {method.value}
                   </p>
                 </div>
                 <svg
-                  className="w-5 h-5 text-gray-600 group-hover:text-purple-400 group-hover:translate-x-1 transition-all"
+                  className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600 group-hover:text-purple-400 group-hover:translate-x-1 transition-all flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -210,17 +218,19 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="pt-6"
+            className="pt-4 lg:pt-6"
           >
-            <h3 className="text-white font-semibold mb-4">Follow Me</h3>
-            <div className="flex gap-4">
+            <h3 className="text-white font-semibold mb-3 lg:mb-4 text-sm lg:text-base">
+              Follow Me
+            </h3>
+            <div className="flex gap-3 lg:gap-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-800 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/50 hover:bg-gray-700 transition-all duration-300"
+                  className="w-10 h-10 lg:w-12 lg:h-12 bg-gray-800 border border-gray-700 rounded-lg lg:rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/50 hover:bg-gray-700 transition-all duration-300"
                 >
                   {social.icon}
                 </a>
@@ -237,8 +247,8 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="lg:col-span-3"
         >
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-3xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-2xl">
+            <h3 className="text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6">
               Send a Message
             </h3>
 
@@ -246,7 +256,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 flex items-center gap-3"
+                className="mb-4 lg:mb-6 p-3 lg:p-4 bg-green-500/10 border border-green-500/30 rounded-xl text-green-400 flex items-center gap-2 lg:gap-3 text-sm lg:text-base"
               >
                 <svg
                   className="w-5 h-5"
@@ -265,11 +275,11 @@ const Contact = () => {
               </motion.div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-xs lg:text-sm font-medium text-gray-300 mb-2"
                 >
                   Name
                 </label>
@@ -279,8 +289,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                  className="w-full px-3 py-2.5 lg:px-4 lg:py-3 bg-gray-800 border border-gray-700 rounded-lg lg:rounded-xl text-white text-sm lg:text-base placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
                   placeholder="John Doe"
                 />
               </div>
@@ -288,7 +297,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-xs lg:text-sm font-medium text-gray-300 mb-2"
                 >
                   Email
                 </label>
@@ -298,8 +307,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                  className="w-full px-3 py-2.5 lg:px-4 lg:py-3 bg-gray-800 border border-gray-700 rounded-lg lg:rounded-xl text-white text-sm lg:text-base placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
                   placeholder="john@example.com"
                 />
               </div>
@@ -307,7 +315,7 @@ const Contact = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-xs lg:text-sm font-medium text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -316,19 +324,18 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 resize-none"
+                  rows={5}
+                  className="w-full px-3 py-2.5 lg:px-4 lg:py-3 bg-gray-800 border border-gray-700 rounded-lg lg:rounded-xl text-white text-sm lg:text-base placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <motion.button
-                type="submit"
+                onClick={handleSubmit}
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white font-medium shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg lg:rounded-xl text-white text-sm lg:text-base font-medium shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
@@ -372,7 +379,7 @@ const Contact = () => {
                   </>
                 )}
               </motion.button>
-            </form>
+            </div>
           </div>
         </motion.div>
       </div>
