@@ -45,6 +45,24 @@ const PROJECTS = [
     github: "https://github.com/RohitMaurya139/Netwise-webApp",
     live: "https://netwise-web-app.vercel.app/",
   },
+  {
+    title: "QuickChat",
+    image: project1,
+    link: "https://quick-chat-client-nu.vercel.app/",
+    description:
+      "Built a real-time messaging platform with Socket.io, supporting live presence detection and instant updates.Integrated Cloudinary API for image and media upload.Optimized socket connections for scalability, reducing message latency",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Socket.io",
+    ],
+    github: "https://github.com/RohitMaurya139/QuickChat",
+    live: "https://quick-chat-client-nu.vercel.app/",
+  },
 ];
 
 const Projects = () => {
