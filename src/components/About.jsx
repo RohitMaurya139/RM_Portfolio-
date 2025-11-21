@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const stats = [
-    { label: "Years Experience", value: "2+", icon: "⏱️" },
+    { label: "Years Experience", value: "1+", icon: "⏱️" },
     { label: "Projects Completed", value: "15+", icon: "🚀" },
-    { label: "Technologies", value: "20+", icon: "💻" },
+    { label: "Technologies", value: "18+", icon: "💻" },
     { label: "Client Satisfaction", value: "100%", icon: "⭐" },
   ];
 

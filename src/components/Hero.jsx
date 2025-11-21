@@ -147,7 +147,7 @@ const Hero = () => {
               className="mt-12 flex gap-6 justify-center lg:justify-start"
             >
               {[
-                { icon: "💼", label: "2+ Years Experience" },
+                { icon: "💼", label: "1+ Years Experience" },
                 { icon: "🚀", label: "15+ Projects" },
                 { icon: "⭐", label: "100% Client Satisfaction" },
               ].map((item, index) => (
@@ -244,7 +244,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 mt-3"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
