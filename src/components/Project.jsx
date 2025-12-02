@@ -10,7 +10,7 @@ const PROJECTS = [
   {
     title: "Buddy AI",
     image: project2,
-    link: "https://quick-cart-opal-one.vercel.app/",
+    link: "https://buddy-ai-frontend.vercel.app/",
     description:
       "BuddyAI, an AI-powered chatbot I built that can handle any type of text query — from general knowledge to the latest real-time information. This project helped me dive deep into LLMs, API integrations, prompt engineering, memory systems, and frontend UI/UX..",
     technologies: [
