@@ -8,6 +8,24 @@ import project6 from "../assets/projects/project-6.PNG";
 // Sample project data - replace with your PROJECTS constant
 const PROJECTS = [
   {
+    title: "Buddy AI",
+    image: project2,
+    link: "https://quick-cart-opal-one.vercel.app/",
+    description:
+      "BuddyAI, an AI-powered chatbot I built that can handle any type of text query — from general knowledge to the latest real-time information. This project helped me dive deep into LLMs, API integrations, prompt engineering, memory systems, and frontend UI/UX..",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Groq Cloude",
+      "LLM",
+      "Tavily",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/RohitMaurya139/buddy-ai",
+    live: "https://buddy-ai-frontend.vercel.app/",
+  },
+  {
     title: "QuickCart",
     image: project8,
     link: "https://quick-cart-opal-one.vercel.app/",
