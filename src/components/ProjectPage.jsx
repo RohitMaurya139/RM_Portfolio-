@@ -105,7 +105,7 @@ const PROJECTS = [
   },
 ];
 
-const Projects = () => {
+const ProjectPage = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
@@ -340,4 +340,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectPage;

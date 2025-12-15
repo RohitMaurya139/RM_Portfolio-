@@ -97,9 +97,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              I am a passionate full-stack developer with expertise in building
-              modern web applications. Specialized in React, Node.js, and cloud
-              technologies. Let's build something amazing together.
+              I’m a Full-Stack + AI Engineer who loves building scalable,
+              modern, and intelligent web applications using React, Node.js, and
+              AI-powered technologies.
             </motion.p>
 
             <motion.div
@@ -148,7 +148,7 @@ const Hero = () => {
             >
               {[
                 { icon: "💼", label: "1+ Years Experience" },
-                { icon: "🚀", label: "15+ Projects" },
+                { icon: "🚀", label: "20+ Projects" },
                 { icon: "⭐", label: "100% Client Satisfaction" },
               ].map((item, index) => (
                 <div

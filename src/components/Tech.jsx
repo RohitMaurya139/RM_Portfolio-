@@ -5,6 +5,7 @@ import {
   RiCss3Line,
   RiJavaLine,
   RiJavascriptLine,
+  RiLinksFill,
 } from "react-icons/ri";
 import {
   SiExpress,
@@ -28,8 +29,49 @@ import {
   SiGraphql,
   SiGit,
 } from "react-icons/si";
+import { FaNetworkWired } from "react-icons/fa";
+import { GiSparkles } from "react-icons/gi";
+import { BiBrain } from "react-icons/bi";
+import { FiFileText } from "react-icons/fi";
+import { BsDatabase } from "react-icons/bs";
 
 const technologies = [
+  {
+    icon: RiLinksFill,
+    name: "LangChain",
+    color: "text-green-400",
+    category: "AI/ML",
+  },
+  {
+    icon: FaNetworkWired,
+    name: "LangGraph",
+    color: "text-blue-400",
+    category: "AI/ML",
+  },
+  {
+    icon: GiSparkles,
+    name: "LangSmith",
+    color: "text-purple-400",
+    category: "AI/ML",
+  },
+  {
+    icon: BiBrain,
+    name: "LLMs",
+    color: "text-cyan-500",
+    category: "AI/ML",
+  },
+  {
+    icon: FiFileText,
+    name: "RAG",
+    color: "text-orange-400",
+    category: "AI/ML",
+  },
+  {
+    icon: BsDatabase,
+    name: "Pinecone",
+    color: "text-teal-500",
+    category: "AI/ML",
+  },
   {
     icon: RiReactjsLine,
     name: "React",
@@ -60,12 +102,12 @@ const technologies = [
     color: "text-green-500",
     category: "Database",
   },
-  // {
-  //   icon: SiMysql,
-  //   name: "MySQL",
-  //   color: "text-blue-500",
-  //   category: "Database",
-  // },
+  {
+    icon: SiMysql,
+    name: "MySQL",
+    color: "text-blue-500",
+    category: "Database",
+  },
   {
     icon: SiTailwindcss,
     name: "Tailwind",
@@ -102,13 +144,7 @@ const technologies = [
     color: "text-blue-600",
     category: "Language",
   },
-  // {
-  //   icon: SiAwsamplify,
-  //   name: "AWS Amplify",
-  //   color: "text-orange-500",
-  //   category: "Cloud",
-  // },
-  // { icon: SiAmazon, name: "AWS", color: "text-orange-400", category: "Cloud" },
+
   {
     icon: SiJsonwebtokens,
     name: "JWT",
@@ -121,13 +157,7 @@ const technologies = [
     color: "text-red-500",
     category: "Language",
   },
-  // { icon: SiC, name: "C", color: "text-blue-700", category: "Language" },
-  // {
-  //   icon: SiCplusplus,
-  //   name: "C++",
-  //   color: "text-blue-500",
-  //   category: "Language",
-  // },
+
   {
     icon: SiPython,
     name: "Python",
@@ -158,6 +188,7 @@ const categories = [
   "Database",
   "Language",
   "Cloud",
+  "AI/ML",
   "Tools",
 ];
 

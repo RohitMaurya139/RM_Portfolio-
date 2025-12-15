@@ -4,12 +4,17 @@ import { motion } from "framer-motion";
 const About = () => {
   const stats = [
     { label: "Years Experience", value: "1+", icon: "⏱️" },
-    { label: "Projects Completed", value: "15+", icon: "🚀" },
-    { label: "Technologies", value: "18+", icon: "💻" },
+    { label: "Projects Completed", value: "20+", icon: "🚀" },
+    { label: "Technologies", value: "25+", icon: "💻" },
     { label: "Client Satisfaction", value: "100%", icon: "⭐" },
   ];
 
   const skills = [
+    {
+      category: "AI/ML",
+      items: ["LLMs", "RAG", "LangChain", "LangGraph", "Vector DataBases"],
+      color: "from-yellow-500 to-yellow-800",
+    },
     {
       category: "Frontend Development",
       items: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
@@ -22,7 +27,7 @@ const About = () => {
     },
     {
       category: "Databases",
-      items: ["MongoDB", "PostgreSQL", "Firebase"],
+      items: ["MongoDB", "MySQL", "Firebase"],
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -111,16 +116,20 @@ const About = () => {
               >
                 I am a{" "}
                 <span className="text-white font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  Full-Stack Web Developer
+                  Full-Stack Developer with AI integration expertise
+                </span>
+                , focused on building{" "}
+                <span className="text-white font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  scalable web applications enhanced with intelligent, AI-driven
+                  features.
                 </span>{" "}
-                passionate about building scalable, user-friendly, and visually
-                appealing web applications. With a strong foundation in{" "}
+                I have hands-on experience with{" "}
                 <span className="text-white font-medium">
                   JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL, and
                   Tailwind CSS
                 </span>
-                , I enjoy solving real-world problems using clean and efficient
-                code.
+                , along with integrating LLMs into production-ready
+                applications.
               </motion.p>
 
               <motion.p
@@ -130,18 +139,18 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-lg"
               >
-                As a{" "}
+                I have practical experience working with{" "}
                 <span className="text-white font-semibold">
-                  B.Tech graduate in Computer Science
-                </span>
-                , I have strengthened my fundamentals by qualifying the GATE
-                exam twice, gaining deep knowledge in{" "}
+                  LangChain, LangGraph, and Retrieval-Augmented Generation (RAG)
+                </span>{" "}
+                to design context-aware AI systems, including{" "}
                 <span className="text-white font-medium">
-                  Data Structures, Algorithms, Operating Systems, Computer
-                  Networks, and Databases
+                  prompt orchestration, memory management, tool calling, and
+                  vector-based knowledge retrieval
                 </span>
-                . This strong academic background enables me to think critically
-                and approach problems from multiple perspectives.
+                . I am passionate about bridging the gap between AI models and
+                real-world applications through robust APIs and clean system
+                architecture.
               </motion.p>
 
               <motion.p
@@ -151,15 +160,20 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg"
               >
-                I am seeking an opportunity in a{" "}
+                As a{" "}
                 <span className="text-white font-semibold">
-                  growth-oriented organization
-                </span>{" "}
-                where I can apply my skills, collaborate with like-minded
-                professionals, and contribute to impactful projects. With
-                qualities of patience, consistency, and a strong team spirit, I
-                am eager to take on challenges and deliver meaningful solutions
-                that make a difference.
+                  B.Tech graduate in Computer Science and a two-time GATE
+                  qualifier
+                </span>
+                , I possess strong fundamentals in{" "}
+                <span className="text-white font-medium">
+                  Data Structures, Algorithms, Operating Systems, Computer
+                  Networks, and Databases
+                </span>
+                , enabling me to design{" "}
+                <span className="text-white font-semibold">
+                  efficient, scalable, and reliable AI-powered systems.
+                </span>
               </motion.p>
             </div>
           </div>
