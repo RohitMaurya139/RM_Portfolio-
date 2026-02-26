@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import {
   RiReactjsLine,
@@ -327,9 +328,9 @@ const Tech = () => {
       >
         {[
           { label: "Technologies", value: technologies.length },
-          { label: "Years Experience", value: "2+" },
-          { label: "Projects Built", value: "15+" },
-          { label: "Lines of Code", value: "50K+" },
+          { label: "Years Experience", value: "1+" },
+          { label: "Projects Built", value: "20+" },
+          { label: "Lines of Code", value: "100K+" },
         ].map((stat, index) => (
           <div
             key={index}

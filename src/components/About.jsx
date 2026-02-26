@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -29,17 +30,6 @@ const About = () => {
       category: "Databases",
       items: ["MongoDB", "MySQL", "Firebase"],
       color: "from-purple-500 to-pink-500",
-    },
-    {
-      category: "Core CS Fundamentals",
-      items: [
-        "Data Structures",
-        "Algorithms",
-        "OS",
-        "Computer Networks",
-        "DBMS",
-      ],
-      color: "from-orange-500 to-red-500",
     },
   ];
 
@@ -114,22 +104,21 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-lg"
               >
-                I am a{" "}
+                Hi, I’m{" "}
                 <span className="text-white font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  Full-Stack Developer with AI integration expertise
+                  Rohit Maurya
                 </span>
-                , focused on building{" "}
+                from Delhi. I have done{" "}
                 <span className="text-white font-semibold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  scalable web applications enhanced with intelligent, AI-driven
-                  features.
+                  B.Tech in Computer Science
                 </span>{" "}
-                I have hands-on experience with{" "}
+                from Indraprastha University with a 9 CGPA.I have experience in{" "}
                 <span className="text-white font-medium">
-                  JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL, and
-                  Tailwind CSS
+                  Full-Stack Development and Generative AI.
                 </span>
-                , along with integrating LLMs into production-ready
-                applications.
+                I’ve built applications using React and Node.js, along with
+                AI-powered projects like HelpDesk AI and Buddy AI, where I
+                integrated LLMs to develop intelligent chatbot systems.
               </motion.p>
 
               <motion.p
@@ -139,41 +128,8 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-lg"
               >
-                I have practical experience working with{" "}
-                <span className="text-white font-semibold">
-                  LangChain, LangGraph, and Retrieval-Augmented Generation (RAG)
-                </span>{" "}
-                to design context-aware AI systems, including{" "}
-                <span className="text-white font-medium">
-                  prompt orchestration, memory management, tool calling, and
-                  vector-based knowledge retrieval
-                </span>
-                . I am passionate about bridging the gap between AI models and
-                real-world applications through robust APIs and clean system
-                architecture.
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg"
-              >
-                As a{" "}
-                <span className="text-white font-semibold">
-                  B.Tech graduate in Computer Science and a two-time GATE
-                  qualifier
-                </span>
-                , I possess strong fundamentals in{" "}
-                <span className="text-white font-medium">
-                  Data Structures, Algorithms, Operating Systems, Computer
-                  Networks, and Databases
-                </span>
-                , enabling me to design{" "}
-                <span className="text-white font-semibold">
-                  efficient, scalable, and reliable AI-powered systems.
-                </span>
+                I’m passionate about building scalable software solutions that
+                combine strong engineering with AI capabilities.
               </motion.p>
             </div>
           </div>

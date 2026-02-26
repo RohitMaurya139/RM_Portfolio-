@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import project1 from "../assets/projects/project-1.PNG";
 import project2 from "../assets/projects/project-2.PNG";
+// eslint-disable-next-line no-unused-vars
 import project7 from "../assets/projects/project-7.PNG";
 import project3 from "../assets/projects/project-3.PNG"
 import project8 from "../assets/projects/project-8.PNG";
@@ -9,11 +11,21 @@ import project6 from "../assets/projects/project-6.PNG";
 // Sample project data - replace with your PROJECTS constant
 const PROJECTS = [
   {
+    title: "HelpDesk AI",
+    image: project1,
+    link: "https://helpdesk-ai-gold.vercel.app/",
+    description:
+      "HelpDesk AI is a multi-tenant SaaS platform where businesses can create their own AI chatbot trained on their custom data and embed it into their website using a simple script tag.",
+    technologies: ["Gemini API", "Next.js", "ScaleKit", "Tailwind CSS"],
+    github: "https://github.com/RohitMaurya139/helpdesk-ai",
+    live: "https://helpdesk-ai-gold.vercel.app/",
+  },
+  {
     title: "Enterprise IQ",
     image: project3,
     link: "https://enterprise-iq-frontend.vercel.app/",
     description:
-      "Enterprise IQ — An Internal AI Assistant for Companies I’m excited to share my latest project: Enterprise IQ, an AI-powered internal chatbot designed to help employees instantly find answers to company policies, HR guidelines, IT support — all powered by modern LLM + RAG architecture.",
+      "Enterprise IQ is an internal AI assistant I built for companies to help employees instantly access information regarding HR policies, company guidelines, and internal documents.Instead of directly querying an LLM, I implemented a Retrieval-Augmented Generation pipeline.",
     technologies: [
       "LangChain",
       "PineCone",
@@ -34,7 +46,7 @@ const PROJECTS = [
     image: project2,
     link: "https://buddy-ai-frontend.vercel.app/",
     description:
-      "BuddyAI, an AI-powered chatbot I built that can handle any type of text query — from general knowledge to the latest real-time information. This project helped me dive deep into LLMs, API integrations, prompt engineering, memory systems, and frontend UI/UX..",
+      "BuddyAI is a personal AI chatbot I built to simulate a modern AI assistant that can answer general queries, fetch real-time information, and maintain contextual memory within a session.",
     technologies: [
       "React.js",
       "Node.js",
@@ -52,27 +64,18 @@ const PROJECTS = [
     image: project8,
     link: "https://quick-cart-opal-one.vercel.app/",
     description:
-      "Developed a fully responsive e-commerce application with role-based authentication (Seller & Customer), allowing product management, cart, and checkout features.Integrated Clerk for Google login and Inngest for backend automation workflows, enhancing scalability and user experience.",
+      "QuickCart is e-commerce application with role-based authentication (Seller & Customer), allowing product management, cart, and checkout features.Integrated Clerk for Google login and Inngest for backend automation workflows, enhancing scalability and user experience.",
     technologies: ["Next.js", "Clerk", "Inngest", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/RohitMaurya139/QuickCart",
     live: "https://quick-cart-opal-one.vercel.app/",
   },
-  {
-    title: "Ask-Ai",
-    image: project7,
-    link: "https://askai-21cm.vercel.app/",
-    description:
-      "Built AskAI, a full-stack MERN application integrating the Groq Llama-3 API to deliver ultra-fast AI-generated responses. Developed a responsive React + Tailwind UI and secure Express backend with environment-based API handling.",
-    technologies: ["React.js", "Groq", "Node.js", "Express.js", "Tailwind CSS"],
-    github: "https://github.com/RohitMaurya139/askai",
-    live: "https://askai-21cm.vercel.app/",
-  },
+
   {
     title: "Netwise",
     image: project6,
     link: "https://netwise-web-app.vercel.app/",
     description:
-      " A full-stack professional networking platform inspired by LinkedIn, featuring secure sign-up and login, personalized profiles with photo, skills, education, company, and experience. Key functionality includes creating and sharing posts (text only), real-time likes and comments using Socket.io, and the ability to send, accept, or reject connection requests.",
+      " Netwise is professional networking platform inspired by LinkedIn, featuring secure sign-up and login, personalized profiles with photo, skills, education, company, and experience. Key functionality includes creating and sharing posts (text only), real-time likes and comments using Socket.io, and the ability to send, accept, or reject connection requests.",
     technologies: [
       "React.js",
       "Node.js",
@@ -84,24 +87,6 @@ const PROJECTS = [
     ],
     github: "https://github.com/RohitMaurya139/Netwise-webApp",
     live: "https://netwise-web-app.vercel.app/",
-  },
-  {
-    title: "QuickChat",
-    image: project1,
-    link: "https://quick-chat-client-nu.vercel.app/",
-    description:
-      "Built a real-time messaging platform with Socket.io, supporting live presence detection and instant updates.Integrated Cloudinary API for image and media upload.Optimized socket connections for scalability, reducing message latency",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT Authentication",
-      "Tailwind CSS",
-      "Socket.io",
-    ],
-    github: "https://github.com/RohitMaurya139/QuickChat",
-    live: "https://quick-chat-client-nu.vercel.app/",
   },
 ];
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import profileImage from "../assets/profilenew.png"
 // Replace with your actual profile image path
@@ -97,9 +98,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              I’m a Full-Stack + AI Engineer who loves building scalable,
-              modern, and intelligent web applications using React, Node.js, and
-              AI-powered technologies.
+              I’m a Full-Stack and Generative AI Developer passionate about
+              building scalable, modern, and intelligent web applications using
+              React, Node.js, and AI-powered technologies.
             </motion.p>
 
             <motion.div
