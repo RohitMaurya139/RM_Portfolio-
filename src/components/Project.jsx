@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import project1 from "../assets/projects/project-1.PNG";
 import project2 from "../assets/projects/project-2.PNG";
-// eslint-disable-next-line no-unused-vars
-import project7 from "../assets/projects/project-7.PNG";
 import project3 from "../assets/projects/project-3.PNG"
 import project8 from "../assets/projects/project-8.PNG";
 import project6 from "../assets/projects/project-6.PNG";
