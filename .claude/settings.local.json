@@ -3,7 +3,35 @@
     "allow": [
       "Bash(npm uninstall:*)",
       "Bash(npm run:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"profile: HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/rohit.jpg)",
+      "Bash(curl -s -o /dev/null -w \"resume:  HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/resume.pdf)",
+      "Bash(curl -s -o /dev/null -w \"work:    HTTP %{http_code}\\\\n\" http://localhost:5173/work/keyframe)",
+      "Bash(curl -s http://localhost:5173/src/main.jsx)",
+      "Bash(curl -s http://localhost:5173/src/App.jsx)",
+      "Bash(curl -s http://localhost:5173/src/pages/HomePage.jsx)",
+      "Bash(curl -s http://localhost:5173/src/components/sections/Hero.jsx)",
+      "Bash(gh api *)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s -o /dev/null -w \"root: HTTP %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"keyframe: HTTP %{http_code}\\\\n\" http://localhost:5173/work/keyframe)",
+      "Bash(curl -s -o /dev/null -w \"mailflow: HTTP %{http_code}\\\\n\" http://localhost:5173/work/mailflow)",
+      "Bash(curl -s -o /dev/null -w \"helpdesk: HTTP %{http_code}\\\\n\" http://localhost:5173/work/helpdesk-ai)",
+      "Bash(curl -s -o /dev/null -w \"profile:  HTTP %{http_code}\\\\n\" http://localhost:5173/rohit.jpg)",
+      "Bash(node *)",
+      "Bash(curl -s -o /dev/null -w \"keyframe.png:  HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/projects/keyframe.png)",
+      "Bash(curl -s -o /dev/null -w \"mailflow.png:  HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/projects/mailflow.png)",
+      "Bash(curl -s -o /dev/null -w \"helpdesk-ai.png: HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/projects/helpdesk-ai.png)",
+      "Bash(grep -iE \"pinecone|langchain|render|amazon|jsonwebtoken|mongoose|nextdot|nodedot|opena|redux|redis|firebase|docker|vercel|github|tailwind|typescript|javascript|react|vite|socket|express|mongo|git$\")",
+      "Bash(grep -iE \"^si\\(vercel|pinecone\\)$\")",
+      "Bash(curl -s \"https://github-contributions-api.jogruber.de/v4/RohitMaurya139?y=last\")",
+      "Bash(curl -s -o /dev/null -w \"root:     HTTP %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"keyframe.png:    HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/projects/keyframe.png)",
+      "Bash(curl -s -o /dev/null -w \"mailflow.png:    HTTP %{http_code} size=%{size_download}\\\\n\" http://localhost:5173/projects/mailflow.png)",
+      "Bash(git add *)"
     ]
   }
 }
