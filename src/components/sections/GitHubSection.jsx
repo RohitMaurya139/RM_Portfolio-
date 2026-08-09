@@ -20,15 +20,15 @@ function RepoCard({ repo }) {
       href={repo.html_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col justify-between rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15 hover:bg-white/[0.025]"
+      className="group flex min-w-0 flex-col justify-between rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15 hover:bg-white/[0.025]"
     >
       <div>
         <div className="flex items-start justify-between">
-          <div className="flex items-center gap-2">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" className="text-white/50">
+          <div className="flex min-w-0 items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" className="flex-shrink-0 text-white/50">
               <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 11-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" />
             </svg>
-            <span className="font-mono text-[13px] text-white/85">{repo.name}</span>
+            <span className="truncate font-mono text-[13px] text-white/85">{repo.name}</span>
           </div>
           <span className="text-white/20 transition-all group-hover:translate-x-0.5 group-hover:text-white/60">↗</span>
         </div>
@@ -149,7 +149,7 @@ export default function GitHubSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
         >
           {repos
             ? repos.map((r) => <RepoCard key={r.id} repo={r} />)

@@ -23,7 +23,7 @@ export default function FeaturedShowcase() {
           <div
             role="tablist"
             aria-label="Featured projects"
-            className="flex flex-wrap items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.012] p-1"
+            className="grid grid-cols-3 items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.012] p-1 sm:flex sm:flex-wrap"
           >
             {PROJECTS.map((p, i) => (
               <button
@@ -33,7 +33,7 @@ export default function FeaturedShowcase() {
                 aria-selected={i === active}
                 onClick={() => setActive(i)}
                 className={cn(
-                  "relative rounded-full px-3.5 py-1.5 text-[12px] font-medium tracking-wide transition-colors",
+                  "relative min-w-0 rounded-full px-2 py-1.5 text-[11px] font-medium tracking-wide transition-colors sm:px-3.5 sm:text-[12px]",
                   i === active ? "text-white" : "text-white/45 hover:text-white/80"
                 )}
               >
@@ -44,7 +44,7 @@ export default function FeaturedShowcase() {
                     className="absolute inset-0 rounded-full bg-white/[0.08] ring-1 ring-white/10"
                   />
                 )}
-                <span className="relative">{p.title}</span>
+                <span className="relative block truncate">{p.title}</span>
               </button>
             ))}
           </div>

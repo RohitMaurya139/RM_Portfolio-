@@ -73,7 +73,7 @@ function ContactForm() {
   return (
     <form
       onSubmit={submit}
-      className="rounded-2xl border border-white/[0.08] bg-white/[0.012] p-6 text-left md:p-8"
+      className="min-w-0 rounded-2xl border border-white/[0.08] bg-white/[0.012] p-6 text-left md:p-8"
     >
       <div className="mb-6 flex items-center gap-3 font-mono text-[10px] tracking-[0.18em] text-white/45">
         <span className="text-violet-300/80">MSG</span>
@@ -106,7 +106,7 @@ function ContactForm() {
         )}
       </AnimatePresence>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field
           label="Name"
           name="name"
@@ -177,7 +177,7 @@ function Field({
   ...props
 }) {
   return (
-    <label className={cn("block", className)}>
+    <label className={cn("block min-w-0", className)}>
       <span
         className={cn(
           "block font-mono text-[10px] tracking-[0.18em] transition-colors",
@@ -208,8 +208,8 @@ export default function Contact() {
           <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-violet-500/15 blur-3xl" />
           <div className="pointer-events-none absolute inset-0 -z-10 bg-grid opacity-30 mask-radial" />
 
-          <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-            <div>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+            <div className="min-w-0">
               <div className="flex items-center gap-3 font-mono text-[11px] tracking-[0.22em] text-white/50">
                 <span className="text-violet-300/80">08</span>
                 <span className="h-px w-8 bg-white/10" />
@@ -248,7 +248,7 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="mt-12 grid gap-5 border-t border-white/[0.06] pt-8 sm:grid-cols-3 lg:grid-cols-1">
+              <div className="mt-12 grid grid-cols-1 gap-5 border-t border-white/[0.06] pt-8 sm:grid-cols-3 lg:grid-cols-1">
                 {LINKS.map((link) => (
                   <a
                     key={link.label}

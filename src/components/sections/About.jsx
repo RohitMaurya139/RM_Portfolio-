@@ -20,13 +20,13 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-[240px_minmax(0,1fr)] md:gap-14 lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[240px_minmax(0,1fr)] md:gap-14 lg:gap-16">
           <motion.aside
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:sticky md:top-24 md:self-start"
+            className="min-w-0 md:sticky md:top-24 md:self-start"
           >
             <div className="relative w-52 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.015] shadow-xl shadow-black/40 sm:w-56 md:w-full">
               <div className="aspect-[4/5] w-full">
@@ -72,7 +72,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="max-w-2xl"
+            className="min-w-0 max-w-2xl"
           >
             <p className="text-[18px] leading-relaxed text-white/85 md:text-[20px]">
               Hey — I'm Rohit. I build products at the intersection of{" "}

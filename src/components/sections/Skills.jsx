@@ -1,22 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "../ui/Container";
 import SectionLabel from "../ui/SectionLabel";
 import { SKILLS } from "../../data/skills";
 import { getSkillIcon, CATEGORY_ICONS } from "../../lib/iconMap";
+import { useMediaQuery } from "../../lib/useMediaQuery";
 import { cn } from "../../lib/utils";
-
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
-  useEffect(() => {
-    const mql = window.matchMedia(query);
-    const onChange = () => setMatches(mql.matches);
-    onChange();
-    mql.addEventListener("change", onChange);
-    return () => mql.removeEventListener("change", onChange);
-  }, [query]);
-  return matches;
-}
 
 function TechChip({ tech, isHovered, onHover, delay }) {
   const { Icon, color } = getSkillIcon(tech.name);
@@ -71,7 +60,7 @@ function DesktopSkills() {
               onFocus={() => setCatIdx(i)}
               onClick={() => setCatIdx(i)}
               className={cn(
-                "group relative flex flex-col items-start gap-3 rounded-xl border p-4 text-left transition-all",
+                "group relative flex min-w-0 flex-col items-start gap-3 rounded-xl border p-4 text-left transition-all",
                 isActive
                   ? "border-white/15 bg-white/[0.04]"
                   : "border-white/[0.06] bg-white/[0.012] hover:border-white/12"
@@ -116,8 +105,8 @@ function DesktopSkills() {
         })}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
-      <div className="relative rounded-2xl border border-white/[0.06] bg-white/[0.012] p-8">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_280px]">
+      <div className="relative min-w-0 rounded-2xl border border-white/[0.06] bg-white/[0.012] p-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={active.category}

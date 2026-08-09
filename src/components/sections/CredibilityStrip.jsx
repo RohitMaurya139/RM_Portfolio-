@@ -34,7 +34,7 @@ export default function CredibilityStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="flex items-center gap-3"
+                className="flex min-w-0 items-center gap-3"
               >
                 <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-violet-300/80">
                   <Icon size={14} strokeWidth={1.6} />

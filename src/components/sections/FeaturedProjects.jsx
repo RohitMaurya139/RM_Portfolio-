@@ -1,10 +1,12 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Container from "../ui/Container";
 import SectionLabel from "../ui/SectionLabel";
 import ProjectScreenshot from "../ui/ProjectScreenshot";
 import { PROJECTS, ADDITIONAL_PROJECTS } from "../../data/projects";
 import { getSkillIcon } from "../../lib/iconMap";
+import { useMediaQuery } from "../../lib/useMediaQuery";
 import { cn } from "../../lib/utils";
 
 function ProjectLinks({ project }) {
@@ -75,11 +77,11 @@ function ProjectRow({ project, imageRight }) {
     >
       <div
         className={cn(
-          "grid items-center gap-8 md:gap-14 lg:grid-cols-2",
+          "grid grid-cols-1 items-center gap-8 md:gap-14 lg:grid-cols-2",
           imageRight && "lg:[&>*:first-child]:order-2"
         )}
       >
-        <div className="w-full max-w-lg">
+        <div className="w-full min-w-0 max-w-lg">
           <ProjectScreenshot
             project={project}
             aspect="aspect-[16/9]"
@@ -88,8 +90,8 @@ function ProjectRow({ project, imageRight }) {
           />
         </div>
 
-        <div>
-          <div className="mb-4 flex items-center gap-3 font-mono text-[10px] tracking-[0.18em] text-white/40">
+        <div className="min-w-0">
+          <div className="mb-4 flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.18em] text-white/40">
             <span className="text-violet-300/80">{project.index}</span>
             <span className="h-px w-6 bg-white/[0.08]" />
             {project.tags.slice(0, 3).map((t) => (
@@ -127,9 +129,10 @@ function AdditionalCard({ project, index }) {
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="group flex flex-col justify-between rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15 hover:bg-white/[0.025]"
+      className="group flex min-w-0 flex-col justify-between rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15 hover:bg-white/[0.025]"
     >
       <div>
         <div className="mb-4 flex items-center justify-between">
@@ -158,6 +161,15 @@ function AdditionalCard({ project, index }) {
 }
 
 export default function FeaturedProjects() {
+  const [showAll, setShowAll] = useState(false);
+  // one full row of the collapsed grid: 3 at lg (3 cols), 2 below it
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const initialCount = isDesktop ? 3 : 2;
+  const visibleAdditional = showAll
+    ? ADDITIONAL_PROJECTS
+    : ADDITIONAL_PROJECTS.slice(0, initialCount);
+  const hiddenCount = ADDITIONAL_PROJECTS.length - initialCount;
+
   return (
     <section id="work" className="py-24 md:py-32">
       <Container>
@@ -197,11 +209,40 @@ export default function FeaturedProjects() {
               full-stack, and real-time systems.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {ADDITIONAL_PROJECTS.map((p, i) => (
-              <AdditionalCard key={p.slug} project={p} index={i} />
-            ))}
+          <div id="more-projects" className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <AnimatePresence initial={false}>
+              {visibleAdditional.map((p, i) => (
+                <AdditionalCard
+                  key={p.slug}
+                  project={p}
+                  index={showAll ? Math.max(0, i - initialCount) : i}
+                />
+              ))}
+            </AnimatePresence>
           </div>
+
+          {hiddenCount > 0 && (
+            <div className="mt-10 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                aria-expanded={showAll}
+                aria-controls="more-projects"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm text-white/90 transition-colors hover:border-white/25 hover:bg-white/5"
+              >
+                {showAll ? "Show less" : `More projects (${hiddenCount})`}
+                <span
+                  aria-hidden
+                  className={cn(
+                    "text-white/50 transition-transform group-hover:text-white/80",
+                    showAll && "rotate-180"
+                  )}
+                >
+                  ↓
+                </span>
+              </button>
+            </div>
+          )}
         </div>
       </Container>
     </section>

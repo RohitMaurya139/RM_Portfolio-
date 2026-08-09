@@ -17,7 +17,7 @@ function BrowserFrame({ url }) {
         <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
         <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
       </div>
-      <div className="ml-2 flex-1 truncate rounded-md border border-white/[0.06] bg-black/40 px-3 py-1 text-center font-mono text-[11px] text-white/45">
+      <div className="ml-2 min-w-0 flex-1 truncate rounded-md border border-white/[0.06] bg-black/40 px-3 py-1 text-center font-mono text-[11px] text-white/45">
         {url || "preview.local"}
       </div>
     </div>

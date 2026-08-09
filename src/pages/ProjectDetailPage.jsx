@@ -10,11 +10,11 @@ import { getSkillIcon } from "../lib/iconMap";
 function Section({ label, children }) {
   return (
     <section className="border-t border-white/[0.06] py-12 first:border-0 first:pt-0">
-      <div className="grid gap-6 md:grid-cols-[160px_1fr] md:gap-10">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[160px_1fr] md:gap-10">
         <div className="font-mono text-[10px] tracking-[0.18em] text-white/40">
           {label.toUpperCase()}
         </div>
-        <div className="text-[15px] leading-relaxed text-white/75 md:text-base">
+        <div className="min-w-0 text-[15px] leading-relaxed text-white/75 md:text-base">
           {children}
         </div>
       </div>
@@ -49,7 +49,7 @@ function ArchitectureFlow({ steps }) {
 
 function FeaturesGrid({ features }) {
   return (
-    <div className="grid gap-3 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
       {features.map((f, i) => (
         <motion.div
           key={i}
@@ -57,7 +57,7 @@ function FeaturesGrid({ features }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.4, delay: i * 0.05 }}
-          className="group relative overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.012] p-5 transition-colors hover:border-white/15"
+          className="group relative min-w-0 overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.012] p-5 transition-colors hover:border-white/15"
         >
           <div className="mb-3 flex items-center justify-between">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-violet-300">
@@ -177,8 +177,8 @@ export default function ProjectDetailPage() {
           </motion.a>
         )}
 
-        <div className="mt-20 grid gap-10 md:grid-cols-[1fr_320px] md:gap-14">
-          <div>
+        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-[1fr_320px] md:gap-14">
+          <div className="min-w-0">
             {cs.overview && <Section label="Overview">{cs.overview}</Section>}
             {cs.problem && <Section label="Problem">{cs.problem}</Section>}
             {cs.solution && <Section label="Solution">{cs.solution}</Section>}

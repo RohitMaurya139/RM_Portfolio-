@@ -12,7 +12,7 @@ export default function Engineering() {
   return (
     <section id="engineering" className="py-24 md:py-32">
       <Container>
-        <div className="mb-16 grid gap-10 md:grid-cols-2 md:items-end">
+        <div className="mb-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:items-end">
           <div>
             <SectionLabel index="04">Engineering</SectionLabel>
             <h2 className="text-balance text-3xl font-medium leading-tight tracking-tight text-white md:text-[42px]">
@@ -44,7 +44,7 @@ export default function Engineering() {
                   onFocus={() => setActiveIdx(i)}
                   onClick={() => setActiveIdx(i)}
                   className={cn(
-                    "group relative flex flex-col items-start gap-3 rounded-xl border p-4 text-left transition-all duration-300",
+                    "group relative flex min-w-0 flex-col items-start gap-3 rounded-xl border p-4 text-left transition-all duration-300",
                     i === activeIdx
                       ? "border-violet-500/30 bg-violet-500/[0.06]"
                       : "border-white/[0.06] bg-white/[0.012] hover:border-white/15"
@@ -99,9 +99,9 @@ export default function Engineering() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.25 }}
-                  className="grid gap-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10"
+                  className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_auto] md:items-start md:gap-10"
                 >
-                  <div>
+                  <div className="min-w-0">
                     <div className="mb-4 flex items-center gap-3 font-mono text-[10px] tracking-widest text-white/40">
                       <span className="text-violet-300">{`0${activeIdx + 1}`}</span>
                       <span className="h-px w-6 bg-white/10" />
@@ -144,7 +144,7 @@ export default function Engineering() {
               How I build.
             </h3>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {ENGINEERING_PRINCIPLES.map((p, i) => (
               <motion.div
                 key={p.title}
@@ -152,7 +152,7 @@ export default function Engineering() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15"
+                className="group relative min-w-0 overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.012] p-6 transition-colors hover:border-white/15"
               >
                 <div className="mb-4 flex items-center justify-between">
                   <span className="font-mono text-[10px] tracking-[0.18em] text-white/30">

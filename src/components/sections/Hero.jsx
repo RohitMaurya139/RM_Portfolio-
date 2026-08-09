@@ -274,9 +274,9 @@ export default function Hero() {
           variants={stagger}
           initial="hidden"
           animate="show"
-          className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16"
+          className="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16"
         >
-          <div>
+          <div className="min-w-0">
             <motion.div variants={item} className="mb-8 flex items-center gap-3">
               <span className="relative inline-flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-60" />
@@ -350,7 +350,7 @@ export default function Hero() {
             </motion.dl>
           </div>
 
-          <motion.div variants={item} className="hidden lg:block">
+          <motion.div variants={item} className="hidden min-w-0 lg:block">
             <RoleCycler />
           </motion.div>
         </motion.div>

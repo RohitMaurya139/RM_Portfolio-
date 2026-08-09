@@ -22,7 +22,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="relative grid gap-5 pb-14 pl-8 md:grid-cols-[168px_1fr] md:gap-8 md:pl-0"
+              className="relative grid grid-cols-1 gap-5 pb-14 pl-8 md:grid-cols-[168px_1fr] md:gap-8 md:pl-0"
             >
               <div className="relative md:pr-8 md:text-right">
                 <span className="absolute left-[-33px] top-2 h-2 w-2 rounded-full bg-white/40 ring-4 ring-[#0a0a0a] md:left-auto md:right-[-5px]" />
@@ -33,7 +33,7 @@ export default function Experience() {
                   {job.period}
                 </div>
               </div>
-              <div className="md:pl-8">
+              <div className="min-w-0 md:pl-8">
                 <div className="text-lg font-medium text-white md:text-xl">
                   {job.company}
                 </div>

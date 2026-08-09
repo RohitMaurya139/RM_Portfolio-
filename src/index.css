@@ -30,6 +30,11 @@
 html {
   scroll-behavior: smooth;
   background: var(--color-bg);
+  /* clip, not hidden: hidden still allows the viewport to be scrolled
+     programmatically, which leaves the page stuck at a non-zero scrollLeft
+     with no way to pan back (touch panning is disabled). clip also avoids
+     turning body into a scroll container, which would break position: sticky. */
+  overflow-x: clip;
 }
 
 body {
@@ -37,7 +42,7 @@ body {
   min-height: 100dvh;
   background: var(--color-bg);
   color: var(--color-text);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {
